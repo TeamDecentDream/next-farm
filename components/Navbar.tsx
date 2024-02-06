@@ -12,7 +12,9 @@ const Navbar: NextComponentType = () => {
             <Link href={"/"}>
               <Image src={NextFarmLogo} alt="" className="h-10 w-36" />
             </Link>
-            <h1>Trade</h1>
+            <Link href={"/trade"}>
+              <h1>Trade</h1>
+            </Link>
             <Link href={"/farm"}>
               <h1>Farm</h1>
             </Link>
