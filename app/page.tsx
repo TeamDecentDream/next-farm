@@ -1,3 +1,4 @@
+import HomeLast30days from "@/components/home/HomeLast30days";
 import { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -13,10 +14,10 @@ const Home: NextPage = () => {
             양파 대파 버섯 등 <br /> 모든 작물에 투자할 수 있습니다.
           </h1>
           <div className="mt-10">
-            <button className="mr-5 rounded-full bg-[#692F84] p-3 text-2xl">
+            <button className="mr-5 rounded-full bg-[#692F84] p-3 text-2xl font-semibold">
               Connect Wallet
             </button>
-            <button className="rounded-full bg-[#692F84] p-3 text-2xl">
+            <button className="rounded-full bg-[#692F84] p-3 text-2xl font-semibold">
               Trade Now
             </button>
           </div>
@@ -28,21 +29,9 @@ const Home: NextPage = () => {
               직접 써보세요
             </h1>
             <div className="flex justify-between mt-40">
-              <div className="flex flex-col text-center gap-5 font-semibold">
-                <h1 className="text-2xl">Total Users</h1>
-                <h1 className="text-6xl text-[#73FFE6]">1,213,244</h1>
-                <h1 className="text-2xl">In the last 30 days</h1>
-              </div>
-              <div className="flex flex-col text-center gap-5 font-semibold">
-                <h1 className="text-2xl">Total Traders</h1>
-                <h1 className="text-6xl text-[#73FFE6]">213,244</h1>
-                <h1 className="text-2xl">In the last 30 days</h1>
-              </div>
-              <div className="flex flex-col text-center gap-5 font-semibold">
-                <h1 className="text-2xl">Total Value Locked</h1>
-                <h1 className="text-6xl text-[#73FFE6]">$1,213,244</h1>
-                <h1 className="text-2xl">In the last 30 days</h1>
-              </div>
+              <HomeLast30days title="Total Users" amount="1,213,244" />
+              <HomeLast30days title="Total Traders" amount="213,244" />
+              <HomeLast30days title="Total Value Locked" amount="$1,213,244" />
             </div>
           </div>
         </div>

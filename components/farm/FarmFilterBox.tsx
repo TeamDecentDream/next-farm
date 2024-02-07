@@ -1,4 +1,5 @@
 import { NextComponentType } from "next";
+import { BiSolidDownArrow } from "react-icons/bi";
 
 const FarmFilterBox: NextComponentType = () => {
   return (
@@ -13,7 +14,9 @@ const FarmFilterBox: NextComponentType = () => {
         </div>
         <div className="ml-auto mr-20">
           <h1>Sort By</h1>
-          <button className="rounded-full bg-[#4B1464] px-4 h-7">Hot 🔽</button>
+          <button className="rounded-full bg-[#4B1464] px-4 h-7 flex items-center gap-1">
+            Hot <BiSolidDownArrow />
+          </button>
         </div>
         <div>
           <h1>Search</h1>
