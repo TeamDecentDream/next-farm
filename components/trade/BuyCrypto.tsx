@@ -1,6 +1,6 @@
-import { NextPage } from "next";
+import { FC } from "react";
 
-const BuyCrypto: NextPage = () => {
+const BuyCrypto: FC = () => {
   return (
     <>
       <h1>BuyCrypto</h1>

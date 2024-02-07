@@ -1,9 +1,9 @@
-import { NextPage } from "next";
+import { FC } from "react";
 import { IoMdRefresh } from "react-icons/io";
 import { IoSettingsSharp } from "react-icons/io5";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
 
-const Liquidity: NextPage = () => {
+const Liquidity: FC = () => {
   return (
     <>
       <div className="flex w-1/2 mx-auto flex-col">

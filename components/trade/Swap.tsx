@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import Image from "next/image";
 import ChartEx from "/public/images/ChartEx.png";
 import NZFToken from "/public/images/NZFToken.png";
@@ -6,8 +5,9 @@ import USDT from "/public/images/USDT.png";
 import { IoMdRefresh } from "react-icons/io";
 import { IoSettingsSharp } from "react-icons/io5";
 import { BiDownArrowAlt, BiSolidDownArrow } from "react-icons/bi";
+import { FC } from "react";
 
-const Swap: NextPage = () => {
+const Swap: FC = () => {
   return (
     <>
       <div className="flex w-1/2 mx-auto justify-between mt-20">

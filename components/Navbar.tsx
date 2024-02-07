@@ -1,9 +1,9 @@
-import { NextComponentType } from "next";
 import Image from "next/image";
 import NextFarmLogo from "/public/images/NextFarmLogo.png";
 import Link from "next/link";
+import { FC } from "react";
 
-const Navbar: NextComponentType = () => {
+const Navbar: FC = () => {
   return (
     <>
       <div className="max-w-screen bg-[#3E1C4F] h-16">

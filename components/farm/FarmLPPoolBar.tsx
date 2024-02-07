@@ -1,8 +1,8 @@
-import { NextComponentType } from "next";
 import Image from "next/image";
 import OnionTomato from "/public/images/OnionTomato.png";
+import { FC } from "react";
 
-const FarmLPPoolBar: NextComponentType = () => {
+const FarmLPPoolBar: FC = () => {
   return (
     <>
       <div className="w-full bg-[#692F84] h-20 rounded-t-2xl flex items-center justify-between px-5 border-b-[1px] border-gray-600">

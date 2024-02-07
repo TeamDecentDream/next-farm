@@ -1,6 +1,6 @@
-import { NextPage } from "next";
+import { FC } from "react";
 
-const CheckReward: NextPage = () => {
+const CheckReward: FC = () => {
   return (
     <>
       <h1>CheckReward</h1>

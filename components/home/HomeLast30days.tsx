@@ -1,11 +1,11 @@
-import { NextPage } from "next";
+import { FC } from "react";
 
 interface HomeLast30daysProps {
   title: string;
   amount: string;
 }
 
-const HomeLast30days: NextPage<HomeLast30daysProps> = ({ title, amount }) => {
+const HomeLast30days: FC<HomeLast30daysProps> = ({ title, amount }) => {
   return (
     <>
       <div className="flex flex-col text-center gap-5 font-semibold">

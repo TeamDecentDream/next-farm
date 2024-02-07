@@ -1,7 +1,7 @@
-import { NextComponentType } from "next";
+import { FC } from "react";
 import { BiSolidDownArrow } from "react-icons/bi";
 
-const FarmFilterBox: NextComponentType = () => {
+const FarmFilterBox: FC = () => {
   return (
     <>
       <div className="w-1/2 h-20 bg-[#692F84] rounded-2xl mx-auto flex px-10 pt-3">

@@ -1,13 +1,12 @@
 "use client";
 
-import { NextComponentType } from "next";
-import { useState } from "react";
+import { FC, useState } from "react";
 import Swap from "./Swap";
 import Liquidity from "./Liquidity";
 import BuyCrypto from "./BuyCrypto";
 import CheckReward from "./CheckReward";
 
-const TradeNavbar: NextComponentType = () => {
+const TradeNavbar: FC = () => {
   function showCurPage() {
     if (curTradeBar == 0) {
       return <Swap />;
