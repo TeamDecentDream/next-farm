@@ -34,7 +34,7 @@ export default function Page() {
         <ConnectWalletButton />
       </div>
       <div className="max-w-screen  bg-[#E8FFCF] pt-20 pb-20">
-        <div className="w-3/5 mx-auto">
+        <div className="w-[900px] mx-auto">
           <Youtube />
           <Image
             src={Wifi}
