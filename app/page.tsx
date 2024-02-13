@@ -41,11 +41,11 @@ export default function Page() {
             alt=""
             className="absolute right-2 h-28 w-28 -translate-y-[400px]"
           />
-          <h1 className="text-5xl pt-5 font-bold leading-relaxed">
+          <h1 className="text-5xl text-black pt-5 font-bold leading-relaxed">
             넥스트팜이 새로운 농업의 <br />
             시대를 열겠습니다
           </h1>
-          <h1 className="font-medium mt-2">
+          <h1 className="font-medium mt-2 text-black">
             양파 대파 버섯 등 <br /> 모든 작물에 투자할 수 있습니다.
           </h1>
           <div className="mt-3 flex flex-row justify-between">
