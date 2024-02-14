@@ -37,6 +37,7 @@ const Navbar: FC = () => {
           <button>Connect Wallet</button>
         </div>
       </div>
+      <div className="border-b border-gray-400"></div>
     </>
   );
 };
