@@ -5,7 +5,7 @@ const Trade: NextPage = () => {
   return (
     <>
       <TradeNavbar />
-      <div className="max-w-screen h-screen bg-[#E8FFCF] pt-20"></div>
+      <div className="max-w-screen h-screen bg-[#4B1464] pt-20"></div>
     </>
   );
 };
