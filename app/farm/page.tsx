@@ -5,9 +5,9 @@ import { NextPage } from "next";
 const Farm: NextPage = () => {
   return (
     <>
-      <div className="max-w-screen h-screen bg-[#4B1464] pt-20">
+      <div className="max-w-screen h-screen bg-[#E8FFCF] pt-20">
         <FarmFilterBox />
-        <div className="w-1/2 h-1/2 bg-[#692F84] rounded-2xl mx-auto mt-20">
+        <div className="w-[800px] bg-[#2F2B2B] rounded-2xl mx-auto mt-20">
           <FarmLPPoolBar />
           <FarmLPPoolBar />
           <FarmLPPoolBar />
