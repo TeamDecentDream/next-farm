@@ -19,7 +19,7 @@ export default function Page() {
         <div className="w-min-screen pl-8 text-5xl text-end text-[#00B050] font-sans  h-[50px]  ">
           NEXT FARM
         </div>
-        //ss
+
         <div className="pl-16 text-slate-500">
           <a
             href="https://nextfarm-docs.gitbook.io/nextfarm-docs/"
@@ -34,7 +34,11 @@ export default function Page() {
       </div>
       <div className="max-w-screen  bg-[#E8FFCF] pt-20 pb-20">
         <div className="w-[900px] mx-auto">
-          <Youtube />
+          <Youtube
+            src={"https://www.youtube.com/watch?v=SvD9fIKSwAQ"}
+            width="960"
+            height="415"
+          />
           <Image
             src={Wifi}
             alt=""
