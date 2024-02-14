@@ -4,7 +4,7 @@ import { BiSolidDownArrow } from "react-icons/bi";
 const FarmFilterBox: FC = () => {
   return (
     <>
-      <div className="w-[800px] h-20 bg-[#2F2B2B] rounded-2xl mx-auto flex px-10 pt-3">
+      <div className="w-[800px] h-20 bg-[#2F2B2B] rounded-2xl mx-auto flex px-10 pt-3 text-white">
         <div>
           <h1>Filter By</h1>
           <div className="rounded-full bg-[#96AA47]">
