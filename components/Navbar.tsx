@@ -20,8 +20,12 @@ const Navbar: FC = () => {
               NEXT FARM
             </button>
           </Link>
-          <button className="pl-5">Trade</button>
-          <button className="pl-5">Farm</button>
+          <Link href="/trade">
+            <button className="pl-5">Trade</button>
+          </Link>
+          <Link href="/farm">
+            <button className="pl-5">Farm</button>
+          </Link>
           <button className="pl-5">Earn</button>
           <h2>...</h2>
         </div>
