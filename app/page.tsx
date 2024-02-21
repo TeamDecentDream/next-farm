@@ -9,9 +9,10 @@ import { NextPage } from "next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ConnectWalletButton from "@/components/metamask/MetamaskConnect";
+import { useAuth } from "@/components/metamask/authContext";
 
 export default function Page() {
+  const { isLoggedIn, login, account } = useAuth();
   return (
     <>
       <div className="flex flex-row p-3 items-center bg-[#E8FFCF] relative ">
@@ -19,7 +20,7 @@ export default function Page() {
         <div className="w-min-screen pl-8 text-5xl text-end text-[#00B050] font-sans  h-[50px]  ">
           NEXT FARM
         </div>
-        //ss
+
         <div className="pl-16 text-slate-500">
           <a
             href="https://nextfarm-docs.gitbook.io/nextfarm-docs/"
@@ -30,7 +31,12 @@ export default function Page() {
           </a>
         </div>
         <div className="pl-10 text-slate-500"> Community</div>
-        <ConnectWalletButton />
+        <button
+          className="rounded-lg absolute px-6 top-3 right-3 py-[15px] bg-[#DFE232] connect-wallet-button"
+          onClick={login}
+        >
+          {isLoggedIn ? account : "Connect Wallet"}
+        </button>
       </div>
       <div className="max-w-screen  bg-[#E8FFCF] pt-20 pb-20">
         <div className="w-[900px] mx-auto">
