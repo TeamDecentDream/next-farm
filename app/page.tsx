@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useAuth } from "@/components/metamask/authContext";
 
-export default function Page() {
+const Home: NextPage = () => {
   const { isLoggedIn, login, account } = useAuth();
   return (
     <>
@@ -65,17 +65,10 @@ export default function Page() {
               <h1>Register for early bird access and earn excess returns</h1>
               <Image src={Nx} alt="Nx" className=" h-28 w-[60px]  " />
             </div>
-            <div className="absolute text-sm  pl-10 left-0 translate-y-[200px] flex flex-row  ">
-              Asset with NextFarm
-              <Image
-                src={ChartSmall}
-                alt="ChartSmall"
-                className=" h-[20px] w-[20px] pl-1 "
-              />
-            </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
+export default Home;

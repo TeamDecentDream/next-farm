@@ -4,7 +4,7 @@ import { FC, useState } from "react";
 import Image from "next/image";
 import Rectangle from "../../public/images/Rectangle.png";
 import Navbar from "../Navbar";
-import ImageWithText from "../../components/ImageWithText";
+import ImageWithText from "./ImageWithText";
 
 const DetailsPage: FC = () => {
   return (

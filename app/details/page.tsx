@@ -1,4 +1,4 @@
-import DetailsPage from "@/components/trade/DetailsPage";
+import DetailsPage from "@/components/details/DetailsPage";
 import { NextPage } from "next";
 
 const Details: NextPage = () => {

@@ -11,7 +11,7 @@ const CheckReward: FC = () => {
 
   return (
     <>
-      <div className="flex w-[1000px] mx-auto flex-col">
+      <div className="flex w-[1000px] mx-auto flex-col ">
         <h1 className="text-[#DFE232] text-center text-5xl font-bold mt-20">
           Your Farming Reward
         </h1>

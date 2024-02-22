@@ -6,11 +6,10 @@ import { NextPage } from "next";
 const Trade: NextPage = () => {
   return (
     <>
-      <AuthProvider>
+      <div className="max-w-screen bg-[#E8FFCF]">
         <Navbar />
         <TradeNavbar />
-        <div className="max-w-screen h-screen bg-[#E8FFCF] pt-20"></div>
-      </AuthProvider>
+      </div>
     </>
   );
 };
