@@ -1,17 +1,14 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  ReactNode,
-  useState,
-  useEffect,
-} from "react";
+import { createContext, useContext, ReactNode, useState } from "react";
+import getNZF from "../web3/web3";
 
 interface AuthContextProps {
   isLoggedIn: boolean;
   login: () => void;
   account: string;
+  shortenAccount: string;
+  NZFBalance: string;
 }
 
 declare global {
@@ -27,6 +24,18 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [account, setAccount] = useState<string>("");
+  const [shortenAccount, setShortenAccount] = useState<string>("");
+  const [NZFBalance, setNZFBalance] = useState<string>("0");
+
+  const fetchNZFBalance = async (account: string) => {
+    try {
+      const balance = await getNZF(account);
+      setNZFBalance(balance);
+      console.log(NZFBalance);
+    } catch (error) {
+      console.error("Error fetching NZF balance:", error);
+    }
+  };
 
   const login = async () => {
     try {
@@ -35,8 +44,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
           method: "eth_requestAccounts",
         });
         console.log("Connected with account:", accounts[0]);
+        setAccount(accounts[0]);
         shortenWalletAddress(accounts[0]);
         setIsLoggedIn(true);
+
+        fetchNZFBalance(accounts[0]);
       } else {
         console.error("Metamask is not installed.");
       }
@@ -53,11 +65,13 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     const prefix = account.substring(0, 4);
     const suffix = account.substring(account.length - 4);
 
-    setAccount(prefix + "..." + suffix);
+    setShortenAccount(prefix + "..." + suffix);
   }
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, login, account }}>
+    <AuthContext.Provider
+      value={{ isLoggedIn, login, account, shortenAccount, NZFBalance }}
+    >
       {children}
     </AuthContext.Provider>
   );

@@ -1,10 +1,9 @@
 "use client";
 
-import Youtube from "@/components/youtube/_youtube";
+import Youtube from "@/components/home/youtube/_youtube";
 import NextFarmLogo from "../public/images/NextFarmLogo.png";
 import Wifi from "../public/images/Wifi.png";
 import Nx from "../public/images/Nx.png";
-import ChartSmall from "../public/images/ChartSmall.png";
 import { NextPage } from "next";
 import React from "react";
 import Image from "next/image";
@@ -17,7 +16,7 @@ const Home: NextPage = () => {
     <>
       <div className="flex flex-row p-3 items-center bg-[#E8FFCF] relative ">
         <Image src={NextFarmLogo} alt="NextFarmLogo" className="h-28 w-28" />
-        <div className="w-min-screen pl-8 text-5xl text-end text-[#00B050] font-sans  h-[50px]  ">
+        <div className="w-min-screen pl-8 text-5xl text-end text-[#00B050] font-sans  h-[50px]  font-bold">
           NEXT FARM
         </div>
 
@@ -60,10 +59,10 @@ const Home: NextPage = () => {
               </button>
             </Link>
 
-            <div className="flex flex-col justify-start items-end  translate-x-[250px] translate-y-[40px] ">
+            <div className="flex flex-col justify-start items-end translate-x-[150px]">
               <h1>We launched version 3.</h1>
               <h1>Register for early bird access and earn excess returns</h1>
-              <Image src={Nx} alt="Nx" className=" h-28 w-[60px]  " />
+              <Image src={Nx} alt="Nx" className=" h-28 w-[60px]" />
             </div>
           </div>
         </div>
