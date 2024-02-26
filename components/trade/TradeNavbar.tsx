@@ -1,13 +1,9 @@
 "use client";
 
 import { FC, useState } from "react";
-import Image from "next/image"; // Image 컴포넌트를 가져옵니다.
-import Swap from "./Swap";
-import Liquidity from "./Liquidity";
 import CheckReward from "./CheckReward";
-import NextFarmLogo from "../../public/images/NextFarmLogo.png";
-
-import Link from "next/link";
+import Liquidity from "./Liquidity";
+import Swap from "./Swap";
 
 const TradeNavbar: FC = () => {
   const [curTradeBar, setCurTradeBar] = useState(0);

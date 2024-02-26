@@ -5,10 +5,12 @@ import { FC } from "react";
 const FarmLPPoolBar: FC = () => {
   return (
     <>
-      <div className="w-full bg-[#692F84] h-20 rounded-t-2xl flex items-center justify-between px-5 border-b-[1px] border-gray-600">
+      <div className="w-full h-20 rounded-2xl flex items-center justify-between px-5 border-b-[1px] border-gray-600 text-white">
         <Image src={OnionTomato} alt="" className="w-14" />
-        <h1 className="text-xl">양파-토마토 LP</h1>
-        <h1 className="rounded-full border-[#4B1464] border-4 px-2">0.25%</h1>
+        <h1 className="text-xl font-bold">양파-토마토 LP</h1>
+        <h1 className="rounded-full bg-[#D9D9D9] px-2 text-black font-bold">
+          0.25%
+        </h1>
         <div>
           <h1 className="text-sm text-gray-300">Earned</h1>
           <h1>0</h1>

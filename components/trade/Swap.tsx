@@ -10,8 +10,8 @@ import { FC } from "react";
 const Swap: FC = () => {
   return (
     <>
-      <div className="flex w-5/6 mx-auto justify-between mt-20">
-        <div className="bg-[#DED689] w-[900px] h-[550px] rounded-2xl px-10 py-5">
+      <div className="flex w-[1000px] mx-auto justify-between mt-20">
+        <div className="bg-[#DED689] w-[650px] h-[400px] rounded-2xl px-10 py-5">
           <div className="flex gap-2 items-center">
             <Image src={NZFToken} alt="" className="w-12 h-12" />
             <Image src={USDT} alt="" className="w-10 h-10" />
@@ -24,8 +24,8 @@ const Swap: FC = () => {
               <h1 className="text-[#2B631E] font-bold">+0.002(0.88%)</h1>
             </div>
 
-            <div className="rounded-full bg-[#7C33F4] px-0 flex flex-row ">
-              <button className="rounded-full bg-[#49935E] px-4 h-7">
+            <div className="rounded-full bg-[#96AA47] px-0 flex flex-row ">
+              <button className="rounded-full bg-[#3cad5c] px-4 h-7">
                 24H
               </button>
               <button className="rounded-full px-4 ">1W</button>
@@ -34,6 +34,7 @@ const Swap: FC = () => {
           </div>
           <Image src={ChartEx} alt="" className="mt-12" />
         </div>
+
         <div className="bg-[#DED689] w-[300px] h-[600px] rounded-2xl p-5 ">
           <div className="border-b-[1px] border-white">
             <h1 className="text-3xl font-bold">Swap</h1>
@@ -51,7 +52,7 @@ const Swap: FC = () => {
                 <BiSolidDownArrow size={12} />
               </div>
               <input
-                className="h-20 w-full bg-[#B365D5] rounded-xl mt-2"
+                className="h-20 w-full bg-[#96AA47] rounded-xl mt-2"
                 type="text"
               />
             </div>
@@ -63,11 +64,11 @@ const Swap: FC = () => {
                 <BiSolidDownArrow size={12} />
               </div>
               <input
-                className="h-20 w-full bg-[#B365D5] rounded-xl mt-2"
+                className="h-20 w-full bg-[#96AA47] rounded-xl mt-2"
                 type="text"
               />
             </div>
-            <button className="h-10 w-full bg-[#B365D5] rounded-xl mt-10 text-center font-semibold">
+            <button className="h-10 w-full bg-[#96AA47] rounded-xl mt-10 text-center font-semibold">
               Connect wallet
             </button>
           </div>
