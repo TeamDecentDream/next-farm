@@ -1,11 +1,17 @@
+"use client";
+
 import Image from "next/image";
-import NextFarmLogo from "/public/images/NextFarmLogo.png";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import NZFToken from "../public/images/NZFToken.png";
-import Fix from "../public/images/fix.png";
+import NextFarmLogo from "/public/images/NextFarmLogo.png";
+
+import { useAuth } from "./metamask/authContext";
+import getNZF from "./web3/web3";
 
 const Navbar: FC = () => {
+  const { isLoggedIn, login, account, shortenAccount, NZFBalance } = useAuth();
+
   return (
     <>
       <div className="max-w-screen bg-[#E8FFCF] h-10 flex flex-row items-center justify-between">
@@ -30,11 +36,22 @@ const Navbar: FC = () => {
           <h2>...</h2>
         </div>
         <div className="flex items-center gap-3 pr-5">
-          <Image src={NZFToken} alt="NZFToken" className="h-10 w-10 ml-3 " />
-          <h2>$1.095</h2>
-          <Image src={Fix} alt="NZFToken" className="h-7 w-7 ml-3 " />
-          <button>Choose chain</button>
-          <button>Connect Wallet</button>
+          <div className="flex items-center gap-3">
+            {isLoggedIn && (
+              <>
+                <Image
+                  src={NZFToken}
+                  alt="NZFToken"
+                  className="h-10 w-10 ml-3 "
+                />
+                <h1>{parseInt(NZFBalance) / Math.pow(10, 18)} NZF</h1>
+              </>
+            )}
+          </div>
+
+          <button onClick={login}>
+            {isLoggedIn ? shortenAccount : "로그아웃됨"}
+          </button>
         </div>
       </div>
       <div className="border-b border-gray-400"></div>

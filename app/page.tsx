@@ -1,22 +1,22 @@
 "use client";
 
-import Youtube from "@/components/youtube/_youtube";
+import Youtube from "@/components/home/youtube/_youtube";
 import NextFarmLogo from "../public/images/NextFarmLogo.png";
 import Wifi from "../public/images/Wifi.png";
 import Nx from "../public/images/Nx.png";
-import ChartSmall from "../public/images/ChartSmall.png";
 import { NextPage } from "next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ConnectWalletButton from "@/components/metamask/MetamaskConnect";
+import { useAuth } from "@/components/metamask/authContext";
 
-export default function Page() {
+const Home: NextPage = () => {
+  const { isLoggedIn, login, account } = useAuth();
   return (
     <>
       <div className="flex flex-row p-3 items-center bg-[#E8FFCF] relative ">
         <Image src={NextFarmLogo} alt="NextFarmLogo" className="h-28 w-28" />
-        <div className="w-min-screen pl-8 text-5xl text-end text-[#00B050] font-sans  h-[50px]  ">
+        <div className="w-min-screen pl-8 text-5xl text-end text-[#00B050] font-sans  h-[50px]  font-bold">
           NEXT FARM
         </div>
 
@@ -30,7 +30,12 @@ export default function Page() {
           </a>
         </div>
         <div className="pl-10 text-slate-500"> Community</div>
-        <ConnectWalletButton />
+        <button
+          className="rounded-lg absolute px-6 top-3 right-3 py-[15px] bg-[#DFE232] connect-wallet-button"
+          onClick={login}
+        >
+          {isLoggedIn ? account : "Connect Wallet"}
+        </button>
       </div>
       <div className="max-w-screen  bg-[#E8FFCF] pt-20 pb-20">
         <div className="w-[900px] mx-auto">
@@ -58,22 +63,15 @@ export default function Page() {
               </button>
             </Link>
 
-            <div className="flex flex-col justify-start items-end  translate-x-[250px] translate-y-[40px] ">
+            <div className="flex flex-col justify-start items-end translate-x-[150px]">
               <h1>We launched version 3.</h1>
               <h1>Register for early bird access and earn excess returns</h1>
-              <Image src={Nx} alt="Nx" className=" h-28 w-[60px]  " />
-            </div>
-            <div className="absolute text-sm  pl-10 left-0 translate-y-[200px] flex flex-row  ">
-              Asset with NextFarm
-              <Image
-                src={ChartSmall}
-                alt="ChartSmall"
-                className=" h-[20px] w-[20px] pl-1 "
-              />
+              <Image src={Nx} alt="Nx" className=" h-28 w-[60px]" />
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
+export default Home;

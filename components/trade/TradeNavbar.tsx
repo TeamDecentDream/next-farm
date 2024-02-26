@@ -22,7 +22,7 @@ const TradeNavbar: FC = () => {
   return (
     <>
       <div className="max-w-screen bg-[#96AA47] h-12">
-        <div className="flex justify-around w-1/2 mx-auto h-full items-center">
+        <div className="flex justify-around w-[1000px] mx-auto h-full items-center">
           <button
             onClick={() => setCurTradeBar(0)}
             className={`${curTradeBar === 0 ? "text-[#2A2D14]" : ""}`}
@@ -42,8 +42,8 @@ const TradeNavbar: FC = () => {
             Check Reward
           </button>
         </div>
-        {showCurPage()}
       </div>
+      <div className="bg-[#E8FFCF] pb-12">{showCurPage()}</div>
     </>
   );
 };
