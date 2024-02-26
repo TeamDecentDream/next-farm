@@ -11,7 +11,7 @@ import Link from "next/link";
 import { useAuth } from "@/components/metamask/authContext";
 
 const Home: NextPage = () => {
-  const { isLoggedIn, login, account } = useAuth();
+  const { isLoggedIn, login, shortenAccount } = useAuth();
   return (
     <>
       <div className="flex flex-row p-3 items-center bg-[#E8FFCF] relative ">
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           className="rounded-lg absolute px-6 top-3 right-3 py-[15px] bg-[#DFE232] connect-wallet-button"
           onClick={login}
         >
-          {isLoggedIn ? account : "Connect Wallet"}
+          {isLoggedIn ? shortenAccount : "Connect Wallet"}
         </button>
       </div>
       <div className="max-w-screen  bg-[#E8FFCF] pt-20 pb-20">

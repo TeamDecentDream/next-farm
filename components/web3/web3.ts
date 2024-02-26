@@ -1,9 +1,7 @@
 import abi from "./abi.json";
 
 var { Web3 } = require("web3");
-var web3 = new Web3(
-  `https://sepolia.infura.io/v3/045ed8dc728847669468965b5ec3484a`
-);
+var web3 = new Web3(process.env.NEXT_PUBLIC_INFURA_URL);
 
 let c_address1 = "0x38028608746586a1b1FB5Bf4637E91181fC8E916";
 let contract1 = new web3.eth.Contract(abi, c_address1);
