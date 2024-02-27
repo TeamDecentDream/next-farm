@@ -1,8 +1,6 @@
 "use client";
 
-import Youtube from "@/components/home/youtube/_youtube";
 import NextFarmLogo from "../public/images/NextFarmLogo.png";
-import Wifi from "../public/images/Wifi.png";
 import Nx from "../public/images/Nx.png";
 import { NextPage } from "next";
 import React from "react";
@@ -39,7 +37,7 @@ const Home: NextPage = () => {
             className="rounded-lg absolute px-6 top-3 right-3 py-[15px] bg-[#000000] connect-wallet-button text-green-100"
             onClick={login}
           >
-            {isLoggedIn ? account : "Connect Wallet"}
+            {isLoggedIn ? shortenAccount : "Connect Wallet"}
           </button>
         </div>
         <div className="w-[900px] mx-auto">
@@ -74,9 +72,7 @@ const Home: NextPage = () => {
               </button>
             </Link>
 
-
             <div className="flex flex-col justify-start items-end text-yellow-300  translate-x-[250px] translate-y-[40px] ">
-
               <h1>We launched version 3.</h1>
               <h1>Register for early bird access and earn excess returns</h1>
               <Image src={Nx} alt="Nx" className=" h-28 w-[60px]" />
