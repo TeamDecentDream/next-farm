@@ -1,13 +1,12 @@
 "use client";
 
-import NextFarmLogo from "../public/images/NextFarmLogo.png";
-import Nx from "../public/images/Nx.png";
+import { useAuth } from "@/components/metamask/authContext";
 import { NextPage } from "next";
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useAuth } from "@/components/metamask/authContext";
 import YouTube from "react-youtube";
+import NextFarmLogo from "/public/images/NextFarmLogo.png";
+import Nx from "/public/images/Nx.png";
 
 const Home: NextPage = () => {
   const { isLoggedIn, login, shortenAccount } = useAuth();

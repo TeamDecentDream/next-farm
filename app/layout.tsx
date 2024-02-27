@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { AuthProvider } from "@/components/metamask/authContext";
 import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import { AuthProvider } from "@/components/metamask/authContext";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",

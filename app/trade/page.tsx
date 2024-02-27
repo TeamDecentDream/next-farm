@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import { AuthProvider } from "@/components/metamask/authContext";
 import TradeNavbar from "@/components/trade/TradeNavbar";
 import { NextPage } from "next";
 

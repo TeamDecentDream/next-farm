@@ -2,15 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import NZFToken from "../public/images/NZFToken.png";
+import { useAuth } from "./metamask/authContext";
 import NextFarmLogo from "/public/images/NextFarmLogo.png";
 
-import { useAuth } from "./metamask/authContext";
-import getNZF from "./web3/web3";
-
 const Navbar: FC = () => {
-  const { isLoggedIn, login, account, shortenAccount, NZFBalance } = useAuth();
+  const { isLoggedIn, login, shortenAccount, NZFBalance } = useAuth();
 
   return (
     <>
