@@ -15,7 +15,11 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
+<<<<<<< HEAD
     "web3": "^4.5.0"
+=======
+    "react-youtube": "^10.1.0"
+>>>>>>> jeahyun12
   },
   "devDependencies": {
     "@types/node": "^20",
