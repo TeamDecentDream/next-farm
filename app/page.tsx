@@ -15,13 +15,6 @@ const Home: NextPage = () => {
   const { isLoggedIn, login, shortenAccount } = useAuth();
   return (
     <>
-<<<<<<< HEAD
-      <div className="flex flex-row p-3 items-center bg-[#E8FFCF] relative ">
-        <Image src={NextFarmLogo} alt="NextFarmLogo" className="h-28 w-28" />
-        <div className="w-min-screen pl-8 text-5xl text-end text-[#00B050] font-sans  h-[50px]  font-bold">
-          NEXT FARM
-        </div>
-=======
       <div
         className="max-w-screen bg-[#E8FFCF]  pb-20"
         style={{ backgroundImage: "url('/images/yytt.jpg')" }}
@@ -31,7 +24,6 @@ const Home: NextPage = () => {
           <div className="w-min-screen pl-8 text-5xl text-end text-[#00B050] font-sans  h-[50px]  ">
             NEXT FARM
           </div>
->>>>>>> jeahyun12
 
           <div className="pl-16 text-yellow-300 ">
             <a
@@ -50,18 +42,6 @@ const Home: NextPage = () => {
             {isLoggedIn ? account : "Connect Wallet"}
           </button>
         </div>
-<<<<<<< HEAD
-        <div className="pl-10 text-slate-500"> Community</div>
-        <button
-          className="rounded-lg absolute px-6 top-3 right-3 py-[15px] bg-[#DFE232] connect-wallet-button"
-          onClick={login}
-        >
-          {isLoggedIn ? shortenAccount : "Connect Wallet"}
-        </button>
-      </div>
-      <div className="max-w-screen  bg-[#E8FFCF] pt-20 pb-20">
-=======
->>>>>>> jeahyun12
         <div className="w-[900px] mx-auto">
           <YouTube
             videoId="IXl_CJ6slEI" //동영상 주소
@@ -94,11 +74,9 @@ const Home: NextPage = () => {
               </button>
             </Link>
 
-<<<<<<< HEAD
-            <div className="flex flex-col justify-start items-end translate-x-[150px]">
-=======
+
             <div className="flex flex-col justify-start items-end text-yellow-300  translate-x-[250px] translate-y-[40px] ">
->>>>>>> jeahyun12
+
               <h1>We launched version 3.</h1>
               <h1>Register for early bird access and earn excess returns</h1>
               <Image src={Nx} alt="Nx" className=" h-28 w-[60px]" />

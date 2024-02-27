@@ -1,21 +1,11 @@
-<<<<<<< HEAD
 "use client";
 
-import { FC, useState } from "react";
 import Image from "next/image";
 import Rectangle from "../../public/images/Rectangle.png";
 import Navbar from "../Navbar";
 import ImageWithText from "./ImageWithText";
-=======
 import { FC } from "react";
-import { FaCheckSquare } from "react-icons/fa";
-import Navbar from "../Navbar";
 
-import { FaSearch } from "react-icons/fa";
-import Youtube from "@/components/youtube/_youtube";
-import Image from "next/image";
-import NextFarmLogo from "@/public/images/NextFarmLogo.png";
->>>>>>> jeahyun12
 
 const DetailsPage: FC = () => {
   return (
