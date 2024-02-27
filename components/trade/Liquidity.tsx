@@ -6,7 +6,7 @@ import { MdCheckBoxOutlineBlank } from "react-icons/md";
 const Liquidity: FC = () => {
   return (
     <>
-      <div className="flex w-[1000px] mx-auto flex-col">
+      <div className="flex w-[1000px] mx-auto flex-col h-[80vh]">
         <div className="w-full h-[300px] bg-[#DED689] rounded-t-2xl p-10 mt-20">
           <div>
             <h1 className="text-3xl font-bold">Your Liquidity</h1>
